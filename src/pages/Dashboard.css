@@ -1,0 +1,31 @@
+.dashboard { max-width: 900px; }
+.dash-header { margin-bottom: 1.5rem; }
+.dash-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.dash-header p { font-size: 14px; color: var(--text2); }
+.dash-loading, .dash-empty { display: flex; align-items: center; gap: 10px; padding: 3rem; color: var(--text2); font-size: 14px; justify-content: center; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+.stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; }
+.stat-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+.stat-val { font-size: 28px; font-weight: 800; color: var(--text); line-height: 1; }
+.stat-label { font-size: 12px; font-weight: 500; color: var(--text3); }
+
+.charts-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }
+.chart-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow); }
+.chart-card.wide { grid-column: span 1; }
+.chart-title { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: var(--text2); margin-bottom: 1rem; }
+.chart-empty { font-size: 13px; color: var(--text3); text-align: center; padding: 3rem 0; }
+
+.flags-list { display: flex; flex-direction: column; gap: 8px; }
+.flag-row { display: flex; align-items: center; gap: 12px; padding: 10px 12px; background: var(--bg3); border-radius: var(--radius-sm); }
+.flag-rank { font-size: 12px; font-weight: 700; color: var(--text3); width: 24px; }
+.flag-name { flex: 1; font-size: 13px; color: var(--text); }
+.flag-count { font-size: 12px; font-weight: 600; color: var(--red); background: var(--red-light); padding: 2px 8px; border-radius: 4px; }
+
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .charts-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
